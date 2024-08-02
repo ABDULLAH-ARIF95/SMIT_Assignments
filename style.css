@@ -4,12 +4,9 @@
     font-family: poppins;
     box-sizing: border-box;
 }
-.toph{
-    text-align: center;
-    margin-top: 10px;
-}
+
 body{
-    background: #1e1f21;
+    background-color: #8697c4;
     color: #fff;
 }
 .wrapper{
@@ -32,7 +29,7 @@ body{
 }
 .box img{
     width: 100%;
-    height: 350px;
+    height: 390px;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
@@ -40,7 +37,7 @@ body{
 .overlay{
     height: 0;
     width: 100%;
-    background: linear-gradient(transparent,#1c1c1c 58%);
+    background: linear-gradient(transparent,#7e96d6 58%);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -78,4 +75,54 @@ body{
 }
 .box:hover .overlay{
     height: 100%;
+}  
+.h3name{
+color: #ede8f5;
+
 }
+    a{
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 35px;
+    font-weight: bold;
+    text-decoration: none;
+    background: #333;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 3px solid #333;
+    transition: all .35s;
+  }
+  a:hover{
+    width: 200px;
+    border: 3px solid #3d52a0;
+    background: transparent;
+    color: #3d52a0;
+  }
+  .nine h1 {
+    text-align:center; font-size:50px; text-transform:uppercase; color:#ede8f5; letter-spacing:1px;
+    font-family:"Playfair Display", serif; font-weight:400; 
+  }
+  .nine h1 span {
+    margin-top: 5px;
+      font-size:15px; color:#ede8f5; word-spacing:1px; font-weight:normal; letter-spacing:2px;
+      text-transform: uppercase; font-family:"Raleway", sans-serif; font-weight:500;
+  
+      display: grid;
+      grid-template-columns: 1fr max-content 1fr;
+      grid-template-rows: 27px 0;
+      grid-gap: 20px;
+      align-items: center;
+  }
+  
+  .nine h1 span:after,.nine h1 span:before {
+      content: " ";
+      display: block;
+      border-bottom: 1px solid #7091ec;
+      border-top: 1px solid #7091ec;
+      height: 5px;
+    background-color:#3d52a0;
+  }
+  
