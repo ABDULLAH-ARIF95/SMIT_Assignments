@@ -1,0 +1,162 @@
+nav{
+    width: 100%;
+    display: flex;
+    background-color: black;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+}
+.img2{
+    width: 30%;
+}
+.image1{
+    display: none;
+}
+ul li{
+    display: block;
+     text-decoration:none ;
+     padding: 0px 20px;
+}
+.ritems{
+    display:flex ;
+}
+.button{
+    display: flex;
+}
+.button1{
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    display: block;
+}
+.button2{
+    background-color: red;
+    border: none;
+    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    border-radius: 20px;
+    color: white;
+    overflow: auto;
+}
+.parent{
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    gap: 25px;
+    
+}
+.text{
+    text-align: center;
+}
+.picparent{
+    display: flex;
+    justify-content:center ;
+    gap: 15px;
+    
+}
+.childs{
+    justify-content: center;
+    height: 200px;
+   gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.buttonc{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    height: 50px;
+    width: 150px;
+    
+}
+.logoname{
+    font-family: "futurak";
+}
+.parent2{
+    background-color: rgb(29, 29, 29);
+    color: white;
+    text-align: center;
+    padding: 50px;
+    
+}
+.part1{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.imgp1{
+    width: 50%;
+}
+.text1{
+    width: 50%;
+}
+.cards1{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.cards2{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+.cards{
+    width: 25%;
+}
+
+.parent3{
+    text-align: center;
+    
+    
+}
+@media only screen and (max-width:990px) {
+    nav li{
+        display: none;
+    }
+    nav .button1{
+        display: none;
+    }
+    nav .image1{
+        display: block;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    .picparent{
+        overflow: scroll;
+    }
+    .part1{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .imgp1{
+        width: 100%;
+    }
+    .text1{
+        width: 100%;
+    }
+    .cards1{
+        display: flex;
+        flex-direction: column;
+    }
+    .cards2{
+        display: flex;
+        flex-direction: column;
+    }
+    .cards{
+        width: 100%;
+    }
+}
