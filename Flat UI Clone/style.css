@@ -1,108 +1,100 @@
-
-.top{
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-#text1{
-    margin-right: 500px;
+.top {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.main{
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: auto;
-    background-color: rgb(0, 13, 255);
-
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+  background-color: rgb(0, 13, 255);
 }
-@media screen and (max-width: 425) {
-   .main{
+@media screen and (max-width: 425px) {
+  .main {
     width: 100%;
-   }
-   .boxes{
+  }
+  .boxes {
     display: flex;
     justify-self: center;
     align-self: center;
-   }
+  }
 }
-a{
-    text-decoration: none;
-    color: #000;
+a {
+  text-decoration: none;
+  color: #000;
 }
-.boxes{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 4em;
-    justify-content: space-around;
-    gap: 2em;
-
+.boxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4em;
+  justify-content: space-around;
+  gap: 2em;
 }
-.image{
-    border-radius: 0.5em;
+.image {
+  border-radius: 0.5em;
 }
-.box1{
-    width: 300px;
-    height: 220px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 0.5em;
+.box1 {
+  width: 300px;
+  height: 220px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 0.5em;
 }
-.box2{
-    width: 300px;
-    height: 220px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 0.5em;
+.box2 {
+  width: 300px;
+  height: 220px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 0.5em;
 }
-.box3{
-    width: 300px;
-    height: 220px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 0.5em;
+.box3 {
+  width: 300px;
+  height: 220px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 0.5em;
 }
-.box4{
-    width: 300px;
-    height: 220px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 0.5em;
+.box4 {
+  width: 300px;
+  height: 220px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 0.5em;
 }
-.box5{
-    width: 300px;
-    height: 220px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 0.5em;
+.box5 {
+  width: 300px;
+  height: 220px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 0.5em;
 }
-.box6{
-    width: 300px;
-    height: 220px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 0.5em;
+.box6 {
+  width: 300px;
+  height: 220px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 0.5em;
 }
-.text{
-    display: flex;
-    justify-content: space-between;
+.text {
+  display: flex;
+  justify-content: space-between;
 }
-#text1{
-    font-size: 2em;
-
+#text1 {
+  font-size: 2em;
 }
-#text2{
-    font-size: 1.5em;
-
+#text2 {
+  font-size: 1.5em;
 }
-#new{
-    background-color: red;
-    font-size:large ;
-    border-radius: 0.3em;
-    margin: 10px;
+#new {
+  background-color: red;
+  font-size: large;
+  border-radius: 0.3em;
+  margin: 10px;
 }
-#text2:hover{
-    text-decoration: underline;
+#text2:hover {
+  text-decoration: underline;
 }
