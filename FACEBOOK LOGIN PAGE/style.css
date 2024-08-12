@@ -1,71 +1,80 @@
-.container{
-    height: 100vh;
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  justify-content: center;
+  background-color: rgb(239, 239, 239);
+}
+.rightitems {
+  flex-direction: column;
+  align-items: center;
+}
+.child {
+  color: rgb(8, 102, 255);
+}
+input {
+  width: 90%;
+  height: 30px;
+}
+.parent {
+  display: flex;
+}
+.item2 {
+  background-color: white;
+  border-radius: 0.5em;
+  padding: 15px;
+  text-align: center;
+  margin: 20px;
+  width: 300px;
+  height: 200px;
+}
+#forgetpass {
+  color: rgb(63, 141, 237);
+  text-decoration: underline;
+  font-size: small;
+  cursor: pointer;
+}
+.item1 {
+  margin: 40px;
+}
+#LogIn {
+  width: 90%;
+  background-color: rgb(8, 102, 255);
+  color: white;
+  font-weight: 700;
+  height: 30px;
+  border: none;
+  border-radius: 0.2em;
+}
+#AddAccount {
+  width: 150px;
+  background-color: green;
+  color: white;
+  font-weight: 700;
+  height: 30px;
+  border: none;
+  border-radius: 0.2em;
+}
+.input1 {
+  margin-bottom: 10px;
+}
+.input1::placeholder {
+  color: rgba(16, 15, 15, 0.404);
+}
+#span1 {
+  color: rgb(8, 102, 255);
+  height: 0.4em;
+}
+#paragraph {
+  font-size: large;
+}
+.item3 {
+  text-decoration: none;
+}
+@media screen and (max-width: 425px) {
+  .parent {
     display: flex;
-   align-items: center;
-   font-family: sans-serif;
-   justify-content: center;
-   background-color: rgb(239, 239, 239);
-}
-.rightitems{
     flex-direction: column;
-    align-items: center;
-}
-.child{
-    color:rgb(8,102,255);
-}
-input{
-    width: 90%;
-    height: 30px;
-}
-.item2{
-    background-color:white;
-    border-radius: 0.5em;
-    padding: 15px;
-    text-align: center;
-    margin: 20px;
-    width: 300px;
-    height: 200px;
-}
-#forgetpass{
-    color: rgb(63, 141, 237);
-    text-decoration: underline;
-    font-size: small;
-    cursor: pointer;
-}
-.item1{
-    margin: 40px;
-}
-#LogIn{
-    width: 90%;
-    background-color: rgb(8,102,255);
-    color: white;
-    font-weight: 700;
-    height: 30px;
-    border: none;
-    border-radius: 0.2em;
-}
-#AddAccount{
-    width: 150px;
-    background-color: green;
-    color: white;
-    font-weight: 700;
-    height: 30px;
-    border: none;
-    border-radius: 0.2em;
-}
-.input1{
-    margin-bottom: 10px;
-}
-.input1::placeholder{
-    color: rgba(16, 15, 15, 0.404);
-}
-#span1{
-    color: rgb(8,102,255);
-    height: 0.4em;
-}
-#paragraph{
-    font-size: large;
-}
-.item3{
-    text-decoration: none;
+  }
 }
