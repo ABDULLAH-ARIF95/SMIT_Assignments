@@ -1,105 +1,118 @@
-.container{
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: white;
-    justify-content: center;
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  justify-content: center;
 }
-nav{
-    width: 100%;
-    position: fixed;
-    text-align: center;
-   background-color:rgba(255,255,255,0.3);
+nav {
+  width: 100%;
+  position: fixed;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
 }
-ul.navlist li{
- display: inline;
- padding-left: 15px;
- padding-right: 10px;
+ul.navlist li {
+  display: inline;
+  padding-left: 15px;
+  padding-right: 10px;
 }
-.parent123{
-    flex-direction: column;
+.parent123 {
+  flex-direction: column;
 }
-.first{
-    background-color: whitesmoke;
-    height: 420px;
-    width: 100vw;
-    padding-top: 100px;
-    text-align: center;
-    justify-content: end;
-    margin-bottom: 1em;
+.first {
+  background-color: whitesmoke;
+  height: 420px;
+  width: 100vw;
+  padding-top: 100px;
+  text-align: center;
+  justify-content: end;
+  margin-bottom: 1em;
 }
-.second{
-    background-color: whitesmoke;
-    height: 420px;
-    width: 100vw;
-    padding-top: 100px;
-    text-align: center;
-    justify-content: end;
-    margin-bottom: 1em;
-    font-size: x-large;
+.second {
+  background-color: whitesmoke;
+  height: 420px;
+  width: 100vw;
+  padding-top: 100px;
+  text-align: center;
+  justify-content: end;
+  margin-bottom: 1em;
+  font-size: x-large;
 }
-.third{
-    background-color: black;
-    height: 420px;
-    width: 100vw;
-    padding-top: 100px;
-    text-align: center;
-    align-items: flex-end;
-    margin-bottom: 1em;
-    color: white;
+.third {
+  background-image: url(./Assets/twoiphones.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 600px;
+  padding-top: 100px;
+  margin-bottom: 1em;
+  color: white;
+  display: flex;
+  justify-content: center;
 }
-#p{
-    font-size:60px ;
-    font-weight: bold;
+#p {
+  font-size: 60px;
+  font-weight: bold;
 }
-#p2{
-    font-size:60px ;
-    font-weight: bold;
+#p2 {
+  font-size: 60px;
+  font-weight: bold;
 }
-.thirdbutton{
-    padding-bottom: 2em;
+.thirdbutton {
+  padding-bottom: 2em;
 }
 
-.fourth{
-    float: left;
-    width: 50%;
-    background-image : url(./Assets/promo_underdogs__bevfo01zejgy_large.jpeg);
-    height: 400px;
+.fourth {
+  float: left;
+  width: 50%;
+  background-image: url(./Assets/promo_underdogs__bevfo01zejgy_large.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
 }
-.fifth{
-    float: right;
-    width: 50%;
-    background-image : url(./Assets/promo_ai__couihqxznyvm_large.jpeg);
-    height: 400px;
-    
+.fifth {
+  float: right;
+  width: 50%;
+  background-image: url(./Assets/promo_ai__couihqxznyvm_large.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
 }
-.sixth{
-    float: left;
-    width: 50%;
-    background-image : url(./Assets/promo_ipadpro__ch217v9v7no2_large.jpeg);
-    height: 400px;
-    color: white;
-    text-align: center;
+.sixth {
+  float: left;
+  width: 50%;
+  background-image: url(./Assets/promo_ipadpro__ch217v9v7no2_large.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+  color: white;
+  text-align: center;
 }
-.seventh{
-    float: right;
-    width: 50%;
-    background-image : url(./Assets/promo_apple_watch_series_9_order__b3u85rm9zf6u_large.jpeg);
-    height: 400px;
+.seventh {
+  float: right;
+  width: 50%;
+  background-image: url(./Assets/promo_apple_watch_series_9_order__b3u85rm9zf6u_large.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
 }
-.eighth{
-    float: right;
-    width: 50%;
-    background-image : url(./Assets/promo_iphone_tradein__bugw15ka691e_large.jpeg);
-    height: 400px;
+.eighth {
+  float: right;
+  width: 50%;
+  background-image: url(./Assets/promo_iphone_tradein__bugw15ka691e_large.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
 }
-.ninth{
-    float: left;
-    width: 50%;
-    background-image : url(./Assets/promo_ipadpro__ch217v9v7no2_large.jpeg);
-    height: 400px;
+.ninth {
+  float: left;
+  width: 50%;
+  background-image: url(./Assets/promo_ipadpro__ch217v9v7no2_large.jpeg);
+  background-position: center;
+  background-size: cover;
+  height: 400px;
 }
-#p6{
-    font-size:60px ;
-    font-weight: bold;
+#p6 {
+  font-size: 60px;
+  font-weight: bold;
 }
