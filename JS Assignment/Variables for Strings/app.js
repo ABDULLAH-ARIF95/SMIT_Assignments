@@ -29,7 +29,7 @@ var book = "A smarter way to learn JavaScript";
 alert("I am trying to learn from the book " + book);
 
 //question 8
-document.write("Yah! I can write html content through Javascript")
+document.write("Yah! I can write html content through Javascript,<br>“▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”")
 //question 9
 var designedText = "“▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”";
 alert(designedText);
