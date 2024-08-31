@@ -35,18 +35,10 @@ document.write(
 );
 
 //Question 5
-var table = 2;
-document.write("<br> <br> table of 2 ");
-document.write("<br>  2 x 1 = ", table);
-document.write("<br>  2 x 2 = ", table * 2);
-document.write("<br>  2 x 3 = ", table * 3);
-document.write("<br>  2 x 4 = ", table * 4);
-document.write("<br>  2 x 5 = ", table * 5);
-document.write("<br>  2 x 6 = ", table * 6);
-document.write("<br>  2 x 7 = ", table * 7);
-document.write("<br>  2 x 8 = ", table * 8);
-document.write("<br>  2 x 9 = ", table * 9);
-document.write("<br>  2 x 10 = ", table * 10);
+document.write("<br>")
+for (i = 0; i < 10; i++) {
+  document.write("<br>  2 x ", i + 1, " = ", (i + 1) * 2);
+}
 
 // //Question 6
 // var Calcius = ;
@@ -71,17 +63,42 @@ document.write("<br>  obtained marks: ", marksObtained);
 document.write("<br>  Percentage ", percentage);
 
 //Question 9
-var dollar = 104.80;
+var dollar = 104.8;
 var riyal = 28;
-document.write("<br> <br> Total Currency in PKR: ",dollar*10+riyal*25 );
+document.write("<br> <br> Total Currency in PKR: ", dollar * 10 + riyal * 25);
 
 //Question 10
-var newNum=8
-document.write("<br> <br> ",((newNum+5)*10)/2);
+var newNum = 8;
+document.write("<br> <br> ", ((newNum + 5) * 10) / 2);
 
 //Question 11
-var birthYear=2007
-var currentYear=2024
-document.write("<br> <br> Current Year:",currentYear);
-document.write("<br>  Birth Year:",birthYear);
-document.write("<br>  Your Age is: ",currentYear-birthYear," Years");
+var birthYear = 2007;
+var currentYear = 2024;
+document.write("<br> <br> Current Year:", currentYear);
+document.write("<br>  Birth Year:", birthYear);
+document.write("<br>  Your Age is: ", currentYear - birthYear, " Years");
+
+//Question 12
+var radius = 20;
+var pi = 3.142;
+document.write("<br> <br> Radius of a circle: ", radius);
+document.write("<br>  The circumference is: ", 2 * pi * radius);
+document.write("<br> The area is: ", pi * radius * radius);
+
+//Question 13
+var favSnack = "Pakola";
+var currentAge = 17;
+var maxAge = 80;
+var perDay = 2;
+var totalSnacks = (maxAge - currentAge) * perDay;
+document.write("<br> <br> Favorite Snack : ", favSnack);
+document.write("<br> Current Age : ", currentAge);
+document.write("<br> Max Age : ", maxAge);
+document.write("<br> Amount : ", perDay);
+document.write(
+  "<br>  You will need ",
+  totalSnacks,
+  " ",
+  favSnack,
+  " to last you until old age of 80"
+);
