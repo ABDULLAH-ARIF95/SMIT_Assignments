@@ -24,7 +24,24 @@
     border-radius: 10px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  .table {
+    border-collapse: collapse;
+    width: 100%;
+  }
   
+  .table th, td {
+    border: 1px solid black; 
+    padding: 8px;
+  }
+  
+  
+  .grade{
+    border-collapse: collapse;
+  }
+  .grade th, .grade td{
+    border: none; 
+
+  }
   .grade {
     margin-top: 20px;
   }
