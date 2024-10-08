@@ -37,14 +37,12 @@ heading.innerText = "MARKSHEET";
 mainDiv.appendChild(heading);
 
 var table = document.createElement("table");
-
 table.setAttribute("class", "table");
 table.setAttribute("cellpadding", "10");
 table.setAttribute("cellspacing", "4");
 var count = 0;
 var totalMarks = 425;
 var userInp = Number(prompt("Enter your Mathematics Marks \n Out of 100"));
-
 for (i = 0; i < 8; i++) {
   count++;
   var tableRow = document.createElement("tr");
@@ -63,19 +61,19 @@ for (i = 0; i < 8; i++) {
     tableCol2.setAttribute("class", "col1");
   } else if (count === 2) {
     subName.innerText = "Math";
-    tableCol1.innerText = 100;
+    tableCol1 = tableCol1.innerText = 100;
     tableCol2.innerText = userInp;
     var userInp1 = Number(prompt("Enter your Physics Marks \n Out of 75"));
     var obtainedMarks = userInp;
   } else if (count === 3) {
-    subName.innerText = "Physics";
-    tableCol1.innerText = 75;
+    subName.innerText = "English";
+    tableCol1.innerText = 100;
     tableCol2.innerText = userInp1;
     var userInp2 = Number(prompt("Enter your Chemistry Marks \n Out of 75"));
     obtainedMarks = obtainedMarks + userInp1;
   } else if (count === 4) {
     subName.innerText = "Chemistry";
-    tableCol1.innerText = 75;
+    tableCol1=tableCol1.innerText = 75;
     tableCol2.innerText = userInp2;
     var userInp3 = Number(prompt("Enter your Computer Marks \n Out of 75"));
     obtainedMarks = obtainedMarks + userInp2;
@@ -86,7 +84,7 @@ for (i = 0; i < 8; i++) {
     var userInp4 = Number(prompt("Enter your English Marks \n Out of 100"));
     obtainedMarks = obtainedMarks + userInp3;
   } else if (count === 6) {
-    subName.innerText = "Engish";
+    subName.innerText = "Physics";
     tableCol1.innerText = 100;
     tableCol2.innerText = userInp4;
     obtainedMarks = obtainedMarks + userInp4;
