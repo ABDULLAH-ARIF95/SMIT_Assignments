@@ -26,7 +26,7 @@ function scholarship(perc) {
   } else if (perc >= 70) {
     return (scholCol4.innerText = "10%");
   } else {
-    return (scholCol4.innerText = "-");
+    return (scholCol4.innerText = "Disqualified");
   }
 }
 var mainDiv = document.getElementById("main");
