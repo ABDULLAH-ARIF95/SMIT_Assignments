@@ -1,7 +1,7 @@
 function percentage() {
-  calc = (obtainedMarks * 100) / totalMarks;
-  calc = calc.toFixed(2);
-  return calc;
+  var calculatePer = (obtainedMarks * 100) / totalMarks;
+  calculatePer = calculatePer.toFixed(2);
+  return calculatePer;
 }
 function toGrade(num) {
   if (num >= 90) {
@@ -20,18 +20,22 @@ function toGrade(num) {
 }
 function scholarship(perc) {
   if (perc >= 90) {
-     return scholCol4.innerText = "30%";   
-    } else if (perc >= 80) {
-     return scholCol4.innerText = "20%";   
-    } else if (perc >= 70) {
-     return scholCol4.innerText = "10%";     
-    }
-    else{
-      return scholCol4.innerText = "-";     
-   
+    return (scholCol4.innerText = "30%");
+  } else if (perc >= 80) {
+    return (scholCol4.innerText = "20%");
+  } else if (perc >= 70) {
+    return (scholCol4.innerText = "10%");
+  } else {
+    return (scholCol4.innerText = "-");
   }
 }
 var mainDiv = document.getElementById("main");
+
+//heading
+var heading = document.createElement("h1");
+heading.innerText = "MARKSHEET";
+mainDiv.appendChild(heading);
+
 var table = document.createElement("table");
 
 table.setAttribute("class", "table");
@@ -40,7 +44,6 @@ table.setAttribute("cellspacing", "4");
 var count = 0;
 var totalMarks = 425;
 var userInp = Number(prompt("Enter your Mathematics Marks \n Out of 100"));
-var calc;
 
 for (i = 0; i < 8; i++) {
   count++;
@@ -101,15 +104,17 @@ for (i = 0; i < 8; i++) {
     subName.setAttribute("class", "num");
   }
 }
+mainDiv.appendChild(table);
+
+//condition for status
 if (percentage() < 40) {
   tableCol2.innerText = "FAIL";
   tableCol2.setAttribute("id", "red");
 }
 
-mainDiv.appendChild(table);
-
 var grade = document.createElement("table");
 
+//for grade
 grade.setAttribute("class", "grade");
 grade.setAttribute("cellpadding", "5");
 var gradeRow1 = document.createElement("tr");
@@ -122,8 +127,9 @@ var gradeCol4 = document.createElement("td");
 gradeCol1.innerText = "";
 gradeCol2.innerText = "Grade";
 gradeCol2.setAttribute("class", "forClass");
-gradeCol4.innerText = toGrade(calc);
+gradeCol4.innerText = toGrade(percentage());
 
+//for percentage
 var perRow1 = document.createElement("tr");
 var perCol1 = document.createElement("td");
 perCol1.setAttribute("width", "15");
@@ -135,34 +141,35 @@ perCol2.innerText = "Percentage";
 perCol2.setAttribute("class", "forClass");
 perCol4.innerText = percentage();
 
+//for scholarship
 var scholRow = document.createElement("tr");
 var scholCol1 = document.createElement("td");
-scholCol1.setAttribute("width", "15");
 var scholCol2 = document.createElement("td");
 var scholCol3 = document.createElement("td");
 scholCol3.setAttribute("width", "150");
 var scholCol4 = document.createElement("td");
 scholCol2.innerText = "Scholarship";
-scholCol2.setAttribute("class", "forClass");
-scholCol4.innerText = scholarship(calc);
+scholCol4.innerText = scholarship(percentage());
 
+//appending grade
 gradeRow1.appendChild(gradeCol1);
 gradeRow1.appendChild(gradeCol2);
 gradeRow1.appendChild(gradeCol3);
 gradeRow1.appendChild(gradeCol4);
 grade.appendChild(gradeRow1);
 
+//appending percentage
 perRow1.appendChild(perCol1);
 perRow1.appendChild(perCol2);
 perRow1.appendChild(perCol3);
 perRow1.appendChild(perCol4);
 grade.appendChild(perRow1);
 
+//appending scholarship
 scholRow.appendChild(scholCol1);
 scholRow.appendChild(scholCol2);
 scholRow.appendChild(scholCol3);
 scholRow.appendChild(scholCol4);
-
-
 grade.appendChild(scholRow);
+
 mainDiv.appendChild(grade);
