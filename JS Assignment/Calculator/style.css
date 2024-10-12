@@ -4,8 +4,8 @@ body{
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(46, 55, 68);
-}
+    background-color: #2c2c34;
+  }
 
 .calculator {
     width: 300px;
@@ -28,6 +28,7 @@ body{
     color: #ff9800; 
     box-sizing: border-box;
     border-radius: 5px;
+    overflow: hidden;
   }
   
   button {
@@ -75,19 +76,24 @@ body{
     background-color: #e67e00;
   }
 
-@media screen and (max-width:1440)and(min-width : 1024px) {
+@media screen and (min-width:1440px) and (max-width:1640px) {
+  .display{
+    height: 100px;
+    font-size: 44px;
+  }
     .calculator{
-        width: 450px;
-        height: 550px;
+        width: 600px;
+        height: 700px;
     }
     button {
-        width: 70px;
-        height: 75px;
+        width: 90px;
+        height: 95px;
     }
     .zero{
-        width: 300px;
-    }
-    button.equal{
-        height: 170px;
+        width: 90%;
+      }
+      button.equal{
+      height: 90%;
+        
     }
 }
