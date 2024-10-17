@@ -8,22 +8,19 @@ var links = [
 ];
 var count = 0;
 gettingImage.setAttribute("src", links[count]);
-function carousel(value) {
+function nextImage() {
+  count++;
   if (count > 4) {
-    count = 0;
-  }
-  if (count < 0) {
-    count = 4;
+    count = 0; 
   }
   gettingImage.setAttribute("src", links[count]);
-  if (value === "forward") {
-    count++;
-    return;
-  }
-  if (value === "backward") {
-    count--;
-    return;
-  }
-  count++;
 }
-setInterval(carousel, 2000);
+
+function prevImage() {
+  count--;
+  if (count < 0) {
+    count = 4; 
+  }
+  gettingImage.setAttribute("src", links[count]);
+}
+setInterval(nextImage, 3000);

@@ -6,6 +6,7 @@
     <title>CAROUSEL</title>
 </head>
 <body>
+    <h1>Custom Carousel</h1>
     <style>
         body{
             width: 100vw;
@@ -15,6 +16,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-direction: column;
+            color: cornsilk;
             background: linear-gradient(to right, #2E2E2E, #0A0A0A);
         }
         .carousel{
@@ -41,9 +44,9 @@
         }
     </style>
     <div class="carousel">
-        <button class="arrowleft" onClick="carousel('backward')"><img src="./less-than-solid.svg" width="40px"></button>
+        <button class="arrowleft" onClick="prevImage()"><img src="./less-than-solid.svg" width="40px"></button>
         <img id="image" width="100%" height="100%">
-       <button class="arrowright" onClick="carousel('forward')"><img src="./greater-than-solid.svg" width="40px"></button>
+       <button class="arrowright" onClick=" nextImage()"><img src="./greater-than-solid.svg" width="40px"></button>
     </div>
     <script src="./app.js"></script>
 </body>
