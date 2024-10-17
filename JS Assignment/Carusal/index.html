@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAROUSEL</title>
+</head>
+<body>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+            padding: 0%;
+            margin: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #020024, #090979, #00d4ff);
+        }
+        .carousel{
+            width: 600px;
+            height: 400px;
+            display: flex;
+            position: relative;
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            top: 170px;
+            position: absolute;
+            height: 50px;
+        }
+        #image{
+            border-radius: 40px;
+        }
+        .arrowleft{
+            left: 10px;
+        }
+        .arrowright{
+            right: 10px;
+        }
+    </style>
+    <div class="carousel">
+        <button class="arrowleft" onClick="carousel('backward')"><img src="./less-than-solid.svg" width="40px"></button>
+        <img id="image" width="100%" height="100%">
+       <button class="arrowright" onClick="carousel('forward')"><img src="./greater-than-solid.svg" width="40px"></button>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
