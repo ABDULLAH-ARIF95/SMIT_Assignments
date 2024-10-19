@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="toss">
+    <h1 id="heading">Click the button for toss</h1>
+    <button onClick="toss()" id="tossbutton">Toss</button>
+</div>
+<div class="dice">
+    <button id="button1" disabled>player1</button>    <button id="button2" disabled>Player2</button>
+    <h1 id="playerturn"></h1>
+    <h2 id="showwinner"></h2>
+</div>
+    <button id="rolldice1" onClick="dice1()" disabled>Roll the Dice</button>
+    
+    <button id="rolldice2" onClick="dice2()" disabled>Roll the Dice</button>
+    <script src="./app.js"></script>
+</body>
+</html>

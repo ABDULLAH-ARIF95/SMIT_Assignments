@@ -1,0 +1,143 @@
+body {
+    font-family: 'Trebuchet MS', sans-serif;
+    background: radial-gradient(circle at center, #ffffff, #d3d3d3);
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+    text-align: center;
+}
+
+/* Main Heading */
+#heading {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1e90ff;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Toss Button */
+#tossbutton {
+    background: linear-gradient(to right, #ffcc00, #ff9966);
+    color: white;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 15px;
+    padding: 15px 40px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#tossbutton:disabled {
+    background: #d3d3d3;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#tossbutton:hover:not([disabled]) {
+    transform: translateY(-2px);
+}
+
+/* Player Turn Display */
+#playerturn {
+    font-size: 2.2rem;
+    color: #1e90ff;
+    margin: 25px 0;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-top: -10px;
+}
+/* Player Buttons */
+#button1, #button2 {
+    background-color: #32cd32;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 30px;
+    cursor: pointer;
+    margin: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+#button1:disabled, #button2:disabled {
+    background-color: #d3d3d3;
+    color: #7f8c8d;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Roll Dice Buttons */
+button#rolldice1, button#rolldice2 {
+    background: linear-gradient(to right, #ff6347, #ff7f50);
+
+    color: white;
+    font-size: 1.4rem;
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button#rolldice1:hover, button#rolldice2:hover {
+    background: linear-gradient(to right, #ff7f50, #ff8c66);
+
+    transform: translateY(-2px);
+}
+
+button#rolldice1:disabled, button#rolldice2:disabled {
+    transform: translateY(0px);
+    background-color: #d3d3d3;
+    color: whitesmoke;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+#gameover {
+    font-size: 2.2rem;
+    color: #ff4500;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    button#rolldice1, button#rolldice2 {
+        width: 80%;
+        padding: 20px;
+    }
+
+    #button1, #button2 {
+        width: 100%;
+    }
+}
