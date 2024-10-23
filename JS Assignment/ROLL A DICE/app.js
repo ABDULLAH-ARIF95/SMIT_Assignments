@@ -1,3 +1,5 @@
+var random1;
+var random2;
 var player1;
 var player2;
 var player1name = prompt("Enter player 1 name").toUpperCase();
@@ -76,10 +78,8 @@ function updateButtons() {
     }
   } else {
     document.getElementById("playagain").disabled = false;
-    playerTurnDisplay.innerText = "Game Over";
     playerTurnDisplay.setAttribute("id", "gameover");
-    document.getElementById("showwinner").innerText = "you win";
-
+    playerTurnDisplay.innerText = "Game Over";
     document.getElementById("button2").disabled = true;
     document.getElementById("button1").disabled = true;
   }
@@ -91,13 +91,10 @@ function playAgain() {
   player2 = undefined;
   currentTurn = undefined;
   playerTurnDisplay.innerText = "";
-
   document.getElementById("heading").innerText = "Toss the coin!";
   currentTurn = "";
   document.getElementById("showwinner").innerText = "";
-
   tossButton.removeAttribute("disabled");
-
   document.getElementById("button1").disabled = true;
   document.getElementById("button2").disabled = true;
   document.getElementById("rolldice1").disabled = true;
@@ -121,8 +118,6 @@ function endTurn() {
   }
   updateButtons();
 }
-var random1;
-var random2;
 function dice1() {
   random1 = Math.floor(Math.random() * 7);
   rollDice1.innerText = random1;
@@ -144,6 +139,16 @@ function checkGameOver() {
     document.getElementById("button1").disabled = true;
     document.getElementById("rolldice1").disabled = true;
     document.getElementById("rolldice2").disabled = true;
+    console.log(currentTurn)
+    if (currentTurn === "player1") {
+      document.getElementById("showwinner").innerText = player1name+" win ";
+      currentTurn = "player2"
+      
+    }
+    else{
+      document.getElementById("showwinner").innerText = player2name+" wins";
+      currentTurn = "player1" 
+    }
     updateButtons();
   }
 }
