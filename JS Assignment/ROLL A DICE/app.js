@@ -142,12 +142,10 @@ function checkGameOver() {
     console.log(currentTurn)
     if (currentTurn === "player1") {
       document.getElementById("showwinner").innerText = player1name+" win ";
-      currentTurn = "player2"
       
     }
     else{
       document.getElementById("showwinner").innerText = player2name+" wins";
-      currentTurn = "player1" 
     }
     updateButtons();
   }
