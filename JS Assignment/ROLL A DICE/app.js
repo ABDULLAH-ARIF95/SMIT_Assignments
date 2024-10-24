@@ -6,8 +6,12 @@ var player1name = prompt("Enter player 1 name").toUpperCase();
 var player2name = prompt("Enter player 2 name").toUpperCase();
 var currentTurn;
 var gameOver = false;
-var player1Input = prompt("Heads or Tails?").toLowerCase();
+var player1Input = prompt(
+  "Heads or Tails " + player2name.toLowerCase() + "?"
+).toLowerCase();
 function headsOrTails() {
+  document.getElementById("playagain").disabled = true;
+
   if (player1Input === "tails") {
     player1 = "tails";
     player2 = "heads";
@@ -26,7 +30,7 @@ headsOrTails();
 
 var tossButton = document.getElementById("tossbutton");
 var showWinner = document.getElementById("heading");
-showWinner.innerText = "Toss the coin "+player1name+"!"
+showWinner.innerText = "Toss the coin " + player1name + "!";
 function toss() {
   var toss1 = Math.floor(Math.random() * 2);
   if (toss1 === 0 && player1 !== undefined) {
@@ -57,7 +61,6 @@ var rollDice1 = document.getElementById("rolldice1");
 var rollDice2 = document.getElementById("rolldice2");
 var playerTurnDisplay = document.getElementById("playerturn");
 
-document.getElementById("playagain").disabled = true;
 function updateButtons() {
   if (!gameOver) {
     if (currentTurn === "player1" || player1 === "Winner") {
@@ -73,7 +76,6 @@ function updateButtons() {
       document.getElementById("button1").disabled = true;
       document.getElementById("rolldice1").disabled = false;
       document.getElementById("rolldice2").disabled = false;
-      document.getElementById("playagain").disabled = true;
       playerTurnDisplay.innerText = player2name + " turn";
     }
   } else {
@@ -99,8 +101,8 @@ function playAgain() {
   document.getElementById("button2").disabled = true;
   document.getElementById("rolldice1").disabled = true;
   document.getElementById("rolldice2").disabled = true;
-  rollDice1.innerText = "Roll the Dice";
-  rollDice2.innerText = "Roll the Dice";
+  // rollDice1.innerText = "Roll the Dice";
+  // rollDice2.innerText = "Roll the Dice";
 
   player1Input = prompt("Heads or Tails?").toLowerCase();
   headsOrTails();
@@ -109,12 +111,22 @@ function playAgain() {
 function endTurn() {
   if (currentTurn === "player1") {
     currentTurn = "player2";
+    rollDice1.innerText = "Roll the Dice";
+    rollDice2.innerText = "Roll the Dice";
+ 
     rollDice1 = document.getElementById("rolldice1");
     rollDice2 = document.getElementById("rolldice2");
   } else {
+    rollDice1.innerText = "Roll the Dice";
+    rollDice2.innerText = "Roll the Dice";
     currentTurn = "player1";
     rollDice1 = document.getElementById("rolldice1");
     rollDice2 = document.getElementById("rolldice2");
+  }
+  if (random1===6 && random2===6) { 
+   
+    rollDice1.innerText = "6";
+    rollDice2.innerText = "6";
   }
   updateButtons();
 }
@@ -139,13 +151,10 @@ function checkGameOver() {
     document.getElementById("button1").disabled = true;
     document.getElementById("rolldice1").disabled = true;
     document.getElementById("rolldice2").disabled = true;
-    console.log(currentTurn)
     if (currentTurn === "player1") {
-      document.getElementById("showwinner").innerText = player1name+" win ";
-      
-    }
-    else{
-      document.getElementById("showwinner").innerText = player2name+" wins";
+      document.getElementById("showwinner").innerText = player1name + " win ";
+    } else {
+      document.getElementById("showwinner").innerText = player2name + " wins";
     }
     updateButtons();
   }
