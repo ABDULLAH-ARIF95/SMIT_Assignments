@@ -9,10 +9,17 @@
 <body>
     <h1>SEARCH DATA</h1>
     <form onSubmit="submitData(event)" class="form-div">
+        <span class="text">Email:</span>
+        <div class="email">
+            <input type="text" placeholder="Enter Your Email" id="email" onInput="gmailValid(event)">
+            <span class="error"></span>
+        </div>
+        <span class="text">Name:</span>
         <div class="name">
             <input type="text" placeholder="Enter Your Name" id="username" onInput="inputValid(event)">
             <span class="error"></span>
         </div>
+        <span class="text">Roll Number:</span>
         <div class="rollnumber">
             <input type="text" placeholder="Enter Your Roll Number" id="rollnum" onInput="rollNumValid(event)">
             <span class="error"></span>
@@ -20,7 +27,10 @@
         <input type="submit">
     </form>
     <div class="userinfo">
-        <span id="rollspan"></span><span id="namespan"></span><span id="passwordspan"></span>
+        <span id="rollspan"></span>
+        <span id="emailspan"></span>
+        <span id="namespan"></span>
+          <span id="passwordspan"></span>
     </div>
     <div class="result-error">
      <span>User not found</span>

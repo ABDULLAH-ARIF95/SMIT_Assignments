@@ -1,28 +1,35 @@
 var userData = [{
     name:'ali',
+    email:'alikhan@gmail.com',
     password:'12345',
     rollNumber:"236171"
 },
 {
+    email:'qasim32@gmail.com',
     name:'qasim',
     password:'12345',
     rollNumber:"236172"
 },
 {
+    email:'haseeb123@gmail.com',
     name:'haseeb',
     password:'12345',
     rollNumber:"236173"
 },
 {
+    email:'altaf10@gmail.com',
     name:'altaf',
     password:'12345',
     rollNumber:"236174"
 },
-{ name:'majid',
+{
+    email:'majid29@gmail.com',
+    name:'majid',
     password:'12345',
     rollNumber:"236175"
 },
 {
+    email:'junaid42@gmail.com',
     name:'junaid',
     password:'12345',
     rollNumber:"236176"
@@ -44,6 +51,17 @@ function inputValid(e) {
             return
         }
     e.target.nextElementSibling.style.display = 'none'
+}
+function gmailValid(email) {
+    var inpValue = email.target.value
+    if (inpValue.indexOf("@gmail.com")===-1) {
+        email.target.nextElementSibling.innerText = "invalid gmail"
+        email.target.nextElementSibling.style.display = 'block'
+        usernameData = false
+        return
+     }
+     email.target.nextElementSibling.style.display = 'none'
+
 }
 function rollNumValid(char){
     var inpValue = char.target.value
@@ -73,26 +91,27 @@ function submitData(e){
     e.preventDefault();
     var userInfo = document.getElementsByClassName("userinfo")[0]
     var resultError = document.getElementsByClassName("result-error")[0]
+    var gmail = document.getElementById("email")
     var username = document.getElementById("username")
     var rollNum = document.getElementById("rollnum")
-    var rollSpan = document.getElementById("rollspan")
+    var mailSpan = document.getElementById("emailspan")
     var nameSpan = document.getElementById("namespan")
+    var rollSpan = document.getElementById("rollspan")
     var passwordSpan = document.getElementById("passwordspan")
     if (!usernameData) return
     var i = 0
     while (i<userData.length) {
-        if (userData[i].name===username.value.toLowerCase() && userData[i].rollNumber===rollNum.value  ) {
+        if (userData[i].name===username.value.toLowerCase() && userData[i].rollNumber===rollNum.value && userData[i].email===gmail.value) {
             userInfo.style.display = 'block'
-            // alert("user found")
-            console.log(`ROLL NUMBER:${userData[i].rollNumber}`)
-            console.log(`NAME:${userData[i].name}`)
-            console.log(`PASSWORD:${userData[i].password}`)
+            mailSpan.innerText = `EMAIL: ${userData[i].email}`
             rollSpan.innerText = `ROLL NUMBER: ${userData[i].rollNumber}`
             nameSpan.innerText = `NAME: ${userData[i].name}`
             passwordSpan.innerText = `PASSWORD: ${userData[i].password}`
             resultError.style.display = 'none'
             username.value = ''
             rollNum.value = ''
+            gmail.value = ''
+            usernameData = false
             return
         }
         userInfo.style.display = 'none'
