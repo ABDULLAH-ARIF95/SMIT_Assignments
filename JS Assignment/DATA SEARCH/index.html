@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEARCH DATA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SEARCH DATA</h1>
+    <form onSubmit="submitData(event)" class="form-div">
+        <div class="name">
+            <input type="text" placeholder="Enter Your Name" id="username" onInput="inputValid(event)">
+            <span class="error"></span>
+        </div>
+        <div class="rollnumber">
+            <input type="text" placeholder="Enter Your Roll Number" id="rollnum" onInput="rollNumValid(event)">
+            <span class="error"></span>
+        </div>
+        <input type="submit">
+    </form>
+    <div class="userinfo">
+        <span id="rollspan"></span><span id="namespan"></span><span id="passwordspan"></span>
+    </div>
+    <div class="result-error">
+     <span>User not found</span>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
